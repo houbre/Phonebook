@@ -1,8 +1,8 @@
-phonebook: mini5main.o mini5phone.o
-        gcc -o phonebook  mini5main.o mini5phone.o
+phonebook: main.o phone.o
+        gcc -o phonebook main.o phone.o
 
-mini5main.o: mini5main.c PHONE_RECORD.h
-        gcc -c mini5main.c
+main.o: main.c phone_record.h
+        gcc -c main.c
 
-mini5phone.o: mini5phone.c PHONE_RECORD.h
-        gcc -c mini5phone.c
+phone.o: phone.c phone_record.h
+        gcc -c phone.c
