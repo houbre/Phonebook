@@ -85,7 +85,7 @@ int saveCSV(FILE *CSV) {
 	fprintf(CSV, "Name,birthdate,phone\n");
 
 	//for each record in the phonebook
-	for(person; person < 10; person++){
+	for(int person = 0; person < 10; person++){
 
 		//Earlier we initialized the first index of every "name" to zero.
 		//if we encounter a zero, there are no more record in the phonebook
@@ -112,7 +112,7 @@ int addRecord(char curr_name[], char curr_birth[], char curr_phone[]) {
 	int size = 0;
 
 	//check in which slot of the phonebook we want to add the record
-	for(j; j<10; j++){
+	for(int j = 0; j<10; j++){
 		
 
 		struct PHONE_RECORD person = phonebook[j];
@@ -271,7 +271,7 @@ void initialize_phonebook(){
 	
 	int i = 0;
 	
-	for(i; i < 10; i++)
+	for(int i = 0; i < 10; i++)
 		phonebook[i].name[0] = 0;
 
 }
